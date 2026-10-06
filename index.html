@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleek AI Engine // Pusat Money Changer Executive Presentation</title>
+  <meta name="description" content="Interactive Executive Pitch Deck & Solution Architecture for Pusat Money Changer (Attn: Bapak Budi & Mas Yoel).">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- CRT Scanline Grid Overlay -->
+  <div class="crt-scanlines"></div>
+
+  <!-- Slide Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Floating Controls (Top Right) -->
+  <header class="controls-header">
+    <button id="themeToggleBtn" class="btn-cyber" title="Ganti Tema">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="M4.93 4.93l1.41 1.41"></path>
+        <path d="M17.66 17.66l1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="M6.34 17.66l-1.41 1.41"></path>
+        <path d="M19.07 4.93l-1.41 1.41"></path>
+      </svg>
+      <span>Tema</span>
+    </button>
+    <button id="printBtn" class="btn-cyber" title="Print PDF">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      <span>Print</span>
+    </button>
+    <button id="navToggleBtn" class="btn-cyber active" title="Menu Navigasi">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span>Navigasi</span>
+    </button>
+  </header>
+
+  <!-- Navigation Drawer -->
+  <div id="navOverlay" class="navbar-drawer-overlay"></div>
+  <nav id="navDrawer" class="navbar-drawer">
+    <div class="nav-drawer-header">
+      <span class="nav-drawer-title">// PUSAT MONEY CHANGER DECK</span>
+      <span class="stamp-confidential stamp-pmc" style="font-size:0.55rem;">CONFIDENTIAL</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#opening" class="nav-link active"><span class="number">01</span> Executive Cover</a></li>
+      <li><a href="#problem" class="nav-link"><span class="number">02</span> Strategic Context &amp; Gaps</a></li>
+      <li><a href="#architecture" class="nav-link"><span class="number">03</span> Universal Fleek AI Hub</a></li>
+      <li><a href="#hardware-matrix" class="nav-link"><span class="number">04</span> Fingerprint Readiness Gate</a></li>
+      <li><a href="#demo-hris" class="nav-link"><span class="number">05</span> 🔥 Demo 1: Owner Portal &amp; HRIS</a></li>
+      <li><a href="#demo-gatekeeper" class="nav-link"><span class="number">06</span> 🔥 Demo 2: WA Gatekeeper Kurs</a></li>
+      <li><a href="#strict-guardrail" class="nav-link"><span class="number">07</span> Deep-Dive: Strict Non-Payment</a></li>
+      <li><a href="#security-gate" class="nav-link"><span class="number">08</span> IT Security &amp; Data Governance</a></li>
+      <li><a href="#commercial-quote" class="nav-link"><span class="number">09</span> Enterprise Quotation &amp; OpEx</a></li>
+      <li><a href="#phase2-finance" class="nav-link"><span class="number">10</span> Fase 2: Accounting &amp; Margin</a></li>
+      <li><a href="#timeline" class="nav-link"><span class="number">11</span> 2.5–3 Bulan Rollout Roadmap</a></li>
+      <li><a href="#closing-cta" class="nav-link"><span class="number">12</span> Next Steps &amp; Kick-Off</a></li>
+    </ul>
+    <div class="nav-drawer-footer">
+      CONFIDENTIAL - PT FLEEK GROUP INDONESIA<br>
+      Fleek Project // Pusat Money Changer Edition
+    </div>
+  </nav>
+
+  <!-- SLIDES WRAPPER -->
+  <div class="slides-container">
+
+    <!-- ============================================================
+         SLIDE 01: EXECUTIVE COVER
+         ============================================================ -->
+    <section id="opening" class="slide-panel active-slide">
+      <div class="section-content">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="stamp-confidential">CONFIDENTIAL — PT FLEEK GROUP INDONESIA</span>
+          <span style="font-family:monospace; font-size:0.75rem; color:var(--pmc-green); letter-spacing:1px;">FLEEK_DECK // PUSAT_MONEY_CHANGER_v2.0</span>
+        </div>
+
+        <div style="margin-top:0.3rem;">
+          <span class="project-tag">FLEEK PROJECT // FINANCIAL SERVICES &amp; FOREX INTELLIGENCE</span>
+          <h1 class="opening-title animate-text">
+            Sistem Satu Pintu Back-Office HRIS &amp;<br>WhatsApp Sales Gatekeeper <span class="highlight">Pusat Money Changer</span>
+          </h1>
+          <p class="opening-subtitle">
+            Solusi <b>Fleek AI Intelligent Hub</b>: Menghubungkan mesin fingerprint kantor, WhatsApp staf &amp; nasabah, serta Database ERP secara terpadu. Monitoring 30 staf presisi, denda telat otomatis, serta gatekeeper kurs valas anti-harga basi.
+          </p>
+        </div>
+
+        <div class="cyber-decor" style="padding:1.1rem 1.6rem; display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem; margin-top:0.4rem;">
+          <div>
+            <div style="font-size:0.68rem; color:var(--home-fg-3); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Klien</div>
+            <div style="font-family:var(--font-outfit); font-weight:800; font-size:1.1rem; color:var(--home-fg-1);">Pusat Money Changer</div>
+            <div style="font-size:0.72rem; color:var(--pmc-green);">Valuta Asing &amp; Remittance (Jakarta)</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:var(--home-fg-3); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Audiens Klien</div>
+            <div style="font-family:var(--font-outfit); font-weight:800; font-size:1.05rem; color:var(--home-fg-1);">Pak Budi &amp; Mas Yoel</div>
+            <div style="font-size:0.72rem; color:var(--home-fg-2);">Owner &amp; Partner / IT Background</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:var(--home-fg-3); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Fleek Lead</div>
+            <div style="font-family:var(--font-outfit); font-weight:800; font-size:1.1rem; color:var(--home-fg-1);">Dimitri &amp; Alif</div>
+            <div style="font-family:var(--font-outfit); font-size:0.72rem; color:var(--home-fg-2);">Agency Owner &amp; AE Lead</div>
+          </div>
+          <div>
+            <div style="font-size:0.68rem; color:var(--home-fg-3); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Model Kerjasama</div>
+            <div style="font-family:var(--font-outfit); font-weight:800; font-size:1.05rem; color:var(--pmc-green);">Beli Putus AI Engine</div>
+            <div style="font-size:0.72rem; color:var(--home-fg-2);">4 Minggu Rollout &amp; Hak Cipta Penuh</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Currency Ticker Pinned at Bottom -->
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <span>USD/IDR: 15.680 / 15.750 <span class="rate-up">▲ +0.12%</span></span><span class="marquee-bullet">•</span>
+          <span>SGD/IDR: 11.890 / 11.960 <span class="rate-up">▲ +0.08%</span></span><span class="marquee-bullet">•</span>
+          <span>EUR/IDR: 16.920 / 17.050 <span class="rate-down">▼ -0.15%</span></span><span class="marquee-bullet">•</span>
+          <span>JPY/IDR: 104.20 / 105.80 <span class="rate-up">▲ +0.04%</span></span><span class="marquee-bullet">•</span>
+          <span>AUD/IDR: 10.450 / 10.560 <span class="rate-down">▼ -0.22%</span></span><span class="marquee-bullet">•</span>
+          <span>GBP/IDR: 20.350 / 20.520 <span class="rate-up">▲ +0.18%</span></span><span class="marquee-bullet">•</span>
+          <span>CNY/IDR: 2.180 / 2.220 <span class="rate-up">▲ +0.02%</span></span><span class="marquee-bullet">•</span>
+          <span>MYR/IDR: 3.680 / 3.740 <span class="rate-down">▼ -0.05%</span></span><span class="marquee-bullet">•</span>
+          <span>USD/IDR: 15.680 / 15.750 <span class="rate-up">▲ +0.12%</span></span><span class="marquee-bullet">•</span>
+          <span>SGD/IDR: 11.890 / 11.960 <span class="rate-up">▲ +0.08%</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 02: STRATEGIC CONTEXT & 4 PAIN POINTS
+         ============================================================ -->
+    <section id="problem" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_DIAGNOSIS: CURRENT BUSINESS BOTTLENECKS</span>
+        <div class="project-header">
+          <span class="project-tag">Tantangan Operasional Money Changer</span>
+          <h2 class="project-name animate-text">
+            Trauma Chatbot Lama, Monitoring 30 Staf, dan Sistem yang Terpecah
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1rem; margin-top:0.4rem;">
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--home-accent);">
+            <div style="font-family:var(--font-outfit); font-size:1.35rem; font-weight:900; color:var(--home-accent); margin-bottom:0.2rem;">01.</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.9rem; color:var(--home-fg-1); margin-bottom:0.35rem;">Trauma Cekat AI (Harga Basi)</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4;">
+              Bot lama membalas pertanyaan kurs <b>terlambat 3 jam</b>. Customer tanya USD Rp 17.000, dibalas saat kurs pasar sudah Rp 17.500 namun bot tetap pakai harga lama sehingga timbul kerugian nyata. Serta bot salah memvalidasi "lunas" pada struk palsu.
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-green);">
+            <div style="font-family:var(--font-outfit); font-size:1.35rem; font-weight:900; color:var(--pmc-green); margin-bottom:0.2rem;">02.</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.9rem; color:var(--home-fg-1); margin-bottom:0.35rem;">Monitoring 30 Staf Sulit</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4;">
+              Tim terdiri dari teller, kurir kas, helper, validasi, dan HRD. Staf telat 2 menit atau 7 menit tidak terdeteksi presisi. Mesin fingerprint ada tapi belum terhubung otomatis ke rekap denda dan payroll harian.
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-gold);">
+            <div style="font-family:var(--font-outfit); font-size:1.35rem; font-weight:900; color:var(--pmc-gold); margin-bottom:0.2rem;">03.</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.9rem; color:var(--home-fg-1); margin-bottom:0.35rem;">Ketakutan Sistem "Puzzle"</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4;">
+              Pak Budi khawatir sistem terpecah-pecah: modul A sendiri, B sendiri, C sendiri (<i>"bisa bikin pingsan"</i>). Impian owner adalah satu pintu kontrol: <b>"Di sini kopi, di sini komputer, sambil santai di pantai."</b>
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-blue);">
+            <div style="font-family:var(--font-outfit); font-size:1.35rem; font-weight:900; color:var(--pmc-blue); margin-bottom:0.2rem;">04.</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.9rem; color:var(--home-fg-1); margin-bottom:0.35rem;">Komunikasi Antar-Peran Putus</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4;">
+              Bagian validasi fisik, penghitung harga, teller, dan kurir bergerak sendiri-sendiri. Sering terjadi komunikasi putus: staf lupa sudah mengabari rekanan atau belum, tanpa ada log audit terpusat.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:0.6rem; padding:0.65rem 1rem; background:rgba(16, 185, 129, 0.08); border:1px solid var(--pmc-green); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.76rem; color:var(--pmc-green); font-weight:600;">
+            💡 <b>Solusi Fleek:</b> Menjadikan <b>Fleek AI Core</b> sebagai "Central Intelligent Hub" yang menghubungkan Mesin Fingerprint, WhatsApp, dan Database ERP klien secara otomatis.
+          </span>
+          <span class="stamp-confidential stamp-pmc" style="font-size:0.58rem;">INTELLIGENT HUB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 03: UNIVERSAL FLEEK AI HUB ARCHITECTURE
+         ============================================================ -->
+    <section id="architecture" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_FRAMEWORK: CENTRAL INTELLIGENT HUB</span>
+        <div class="project-header">
+          <span class="project-tag">Arsitektur Universal &amp; Vendor-Agnostic</span>
+          <h2 class="project-name animate-text">
+            Fleek AI Core sebagai Otak Pusat: Terhubung ke ERP / Database Apa Pun
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:1.2rem; margin-top:0.4rem;">
+          <!-- Kolom 1: Modul Baru yang Dibangun Fleek -->
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid var(--pmc-green);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+              <span style="background:var(--pmc-green-dim); color:var(--pmc-green); font-family:var(--font-outfit); font-size:0.68rem; font-weight:800; padding:2px 8px; border-radius:2px;">FLEEK AI OMNI-CORE (DIBANGUN FLEEK)</span>
+              <span style="font-family:monospace; font-size:0.68rem; color:var(--home-fg-3);">RP 50 JT BELI PUTUS</span>
+            </div>
+            <h3 style="font-family:var(--font-outfit); font-size:1.1rem; color:#ffffff; margin-bottom:0.35rem;">Modul Custom yang Dibangun Fleek:</h3>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4; margin-bottom:0.55rem;">
+              Fitur khusus money changer yang <b>TIDAK ADA di Santra</b> maupun ERP standar pasaran:
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.74rem; color:var(--home-fg-1);">
+              <li>⚡ <b>1. Hardware Fingerprint Bridge:</b> Penerima raw log scan sidik jari dari mesin kantor via HTTPS / Local Sync.</li>
+              <li>⚡ <b>2. Precision Late &amp; Penalty Engine:</b> Kalkulasi otomatis telat menit (+2 mnt = Rp 25k, +7 mnt = Rp 50k) &amp; auto-WA peringatan ke staf &amp; HRD.</li>
+              <li>⚡ <b>3. WhatsApp Sales Gatekeeper AI:</b> Jawab kurs valas harian &lt;2 detik, filter nominal, oper ke 5 admin offline.</li>
+              <li>⚡ <b>4. Strict Non-Payment Guardrail:</b> Pemblokir mutlak AI membaca bukti transfer (anti-fraud struk palsu).</li>
+              <li>⚡ <b>5. Owner Beach Digest (WA Cron):</b> Rekap 30 staf (08:30) &amp; rekap omzet valas (17:30) otomatis ke WA Pak Budi.</li>
+            </ul>
+          </div>
+
+          <!-- Kolom 2: Modul Santra yang Digunakan -->
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid var(--pmc-gold);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+              <span style="background:var(--pmc-gold-dim); color:var(--pmc-gold); font-family:var(--font-outfit); font-size:0.68rem; font-weight:800; padding:2px 8px; border-radius:2px;">SANTRA ERP (BACKBONE PARTNER)</span>
+              <span style="font-family:monospace; font-size:0.68rem; color:var(--home-fg-3);">START RP 300K/BLN</span>
+            </div>
+            <h3 style="font-family:var(--font-outfit); font-size:1.1rem; color:#ffffff; margin-bottom:0.35rem;">Modul Santra yang Dimanfaatkan:</h3>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.4; margin-bottom:0.55rem;">
+              Fondasi akuntansi &amp; database teruji yang siap pakai dari platform Santra:
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.74rem; color:var(--home-fg-1);">
+              <li>📦 <b>1. Chart of Accounts (COA 30+ Akun):</b> Kas counter, Bank BCA/Mandiri/BRI, Beban Gaji (5-1001), Modal.</li>
+              <li>📦 <b>2. Jurnal Double-Entry &amp; Catat Cepat:</b> Pembukuan otomatis debit/kredit penerimaan denda &amp; valas.</li>
+              <li>📦 <b>3. Ringkasan Saldo &amp; Riwayat Rekening:</b> Buku kas kasir gaya mutasi bank (statement style).</li>
+              <li>📦 <b>4. Customer Master &amp; AR Aging:</b> Database nasabah korporat &amp; pencatatan tempo/invoicing.</li>
+              <li>📦 <b>5. Fixed Assets &amp; RBAC 3-Tier:</b> Depresiasi brankas/mesin hitung &amp; hak akses (Owner, Admin, Staff).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:0.65rem; padding:0.55rem 0.95rem; background:rgba(16, 185, 129, 0.08); border:1px solid var(--pmc-green); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.74rem; color:var(--pmc-green); font-weight:600;">
+            🔒 <b>Keuntungan untuk Mas Yoel (IT):</b> Arsitektur ini tidak mengunci klien ke satu vendor ERP (Vendor-Agnostic). Fleek AI menjadi gateway independen yang aman dan fleksibel.
+          </span>
+          <span class="stamp-confidential stamp-pmc" style="font-size:0.58rem;">FUTURE PROOF</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 04: FINGERPRINT READINESS GATE (KHUSUS MAS YOEL)
+         ============================================================ -->
+    <section id="hardware-matrix" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// HARDWARE_INTEGRATION: FINGERPRINT READINESS MATRIX</span>
+        <div class="project-header">
+          <span class="project-tag" style="border-color:var(--pmc-gold); color:var(--pmc-gold); background:var(--pmc-gold-dim);">Khusus Diskusi Teknis Mas Yoel (IT)</span>
+          <h2 class="project-name animate-text">
+            3 Skenario Kesiapan Mesin Fingerprint &amp; Cara Fleek Menarik Datanya
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem; margin-top:0.4rem;">
+          <!-- Skenario 1 -->
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--pmc-green);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+              <span style="font-family:var(--font-outfit); font-size:0.75rem; font-weight:800; color:var(--pmc-green);">SKENARIO 1 // CLOUD IoT</span>
+              <span class="wa-header-pill" style="color:var(--pmc-green); border-color:var(--pmc-green);">PLUG &amp; PLAY</span>
+            </div>
+            <h4 style="font-family:var(--font-outfit); font-size:1rem; color:#fff; margin-bottom:0.35rem;">Mesin IoT Modern (ADMS Push)</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.5rem;">
+              Mesin fingerprint terhubung kabel LAN / Wi-Fi kantor dan mendukung protokol <b>ADMS / Cloud Push</b> (standar ZKTeco / Solution).
+            </p>
+            <div style="background:#151514; border:1px solid #282826; border-radius:4px; padding:0.5rem; font-size:0.71rem; color:#34d399; line-height:1.35;">
+              • Mesin langsung menembak <b>HTTPS POST Port 443</b> ke Fleek AI setiap jari nempel.<br>
+              • <b>Biaya Dev:</b> Termasuk dalam paket dasar (Rp 0).
+            </div>
+          </div>
+
+          <!-- Skenario 2 -->
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--pmc-gold);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+              <span style="font-family:var(--font-outfit); font-size:0.75rem; font-weight:800; color:var(--pmc-gold);">SKENARIO 2 // ON-PREMISE</span>
+              <span class="wa-header-pill" style="color:var(--pmc-gold); border-color:var(--pmc-gold);">LOCAL BRIDGE</span>
+            </div>
+            <h4 style="font-family:var(--font-outfit); font-size:1rem; color:#fff; margin-bottom:0.35rem;">Software Desktop Existing di PC</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.5rem;">
+              Mesin tersambung ke 1 PC kasir/admin yang sudah ada software vendor (misal Fingerspot Desktop, ZKTime, BioTime).
+            </p>
+            <div style="background:#151514; border:1px solid #282826; border-radius:4px; padding:0.5rem; font-size:0.71rem; color:#fbbf24; line-height:1.35;">
+              • Fleek pasang <b>Lightweight Sync Agent (5 MB)</b> di PC kasir untuk membaca tabel log lokal dan forward ke cloud.<br>
+              • <b>Biaya Dev:</b> Termasuk dalam paket dasar (Rp 0).
+            </div>
+          </div>
+
+          <!-- Skenario 3 -->
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--home-accent);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.3rem;">
+              <span style="font-family:var(--font-outfit); font-size:0.75rem; font-weight:800; color:var(--home-accent);">SKENARIO 3 // OFFLINE JADUL</span>
+              <span class="wa-header-pill" style="color:#f87171; border-color:#ef4444;">MANUAL USB</span>
+            </div>
+            <h4 style="font-family:var(--font-outfit); font-size:1rem; color:#fff; margin-bottom:0.35rem;">Mesin Standalone (Tarik Flashdisk)</h4>
+            <p style="font-size:0.75rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.5rem;">
+              Mesin jadul tanpa port LAN / Wi-Fi, selama ini staf HRD masih mencolok flashdisk manual tiap akhir bulan.
+            </p>
+            <div style="background:#151514; border:1px solid #282826; border-radius:4px; padding:0.5rem; font-size:0.71rem; color:#f87171; line-height:1.35;">
+              • <b>Rekomendasi Fleek:</b> Upgrade unit ke mesin IoT Cloud modern (~Rp 1,5–2,5 Jt pengadaan mandiri klien).<br>
+              • Menjamin otomatisasi WhatsApp berjalan 100% tanpa campur tangan staf.
+            </div>
+          </div>
+        </div>
+
+        <!-- Fail-Safe Buffer Highlight -->
+        <div style="margin-top:0.65rem; padding:0.6rem 1rem; background:rgba(16, 185, 129, 0.08); border:1px solid var(--pmc-green); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.74rem; color:#d1fae5; line-height:1.4;">
+            🛡️ <b>Fail-Safe Offline Memory:</b> Jika internet kantor sewaktu-waktu mati, mesin fingerprint memiliki memori internal hingga 100.000 log. Begitu internet nyala, seluruh log scan otomatis tersinkronisasi ke Fleek AI tanpa ada data yang hilang!
+          </span>
+          <span class="stamp-confidential stamp-pmc" style="font-size:0.58rem;">ZERO DATA LOSS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 05: 🔥 INTERACTIVE DEMO 1 — OWNER PORTAL & HRIS MATRIX
+         ============================================================ -->
+    <section id="demo-hris" class="slide-panel slide-demo">
+      <div class="section-content">
+        <span class="sect-meta">// LIVE_DEMO_01: IN-DECK HRIS SIMULATOR</span>
+        <div class="project-header" style="margin-bottom:0.35rem;">
+          <span class="project-tag">Demo 1 • Simulasi Back-Office HRIS</span>
+          <h2 class="project-name animate-text" style="font-size:1.55rem;">
+            Owner Command Portal: Monitoring Presensi 30 Staf &amp; Alert Denda Telat
+          </h2>
+        </div>
+
+        <div class="split-demo-grid">
+          <!-- Live HRIS Table & Controls (Kiri) -->
+          <div class="cyber-decor" style="padding:0.95rem; height:460px; display:flex; flex-direction:column; gap:0.55rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <span style="font-family:var(--font-outfit); font-size:0.85rem; font-weight:800; color:#fff;">Daftar Presensi 30 Karyawan (Live Feed)</span>
+                <div style="font-size:0.65rem; color:var(--home-fg-3);">Sinkronisasi Mesin Fingerprint Jakarta ke Fleek AI Core</div>
+              </div>
+              <span class="wa-header-pill" style="border-color:var(--pmc-green); color:var(--pmc-green);">FINGERPRINT ONLINE</span>
+            </div>
+
+            <!-- Stats Mini Bar -->
+            <div class="hris-stats-grid">
+              <div class="hris-stat-card">
+                <div class="hris-stat-label">Total Staf</div>
+                <div class="hris-stat-val">30</div>
+              </div>
+              <div class="hris-stat-card">
+                <div class="hris-stat-label">Hadir Tepat Waktu</div>
+                <div class="hris-stat-val" id="hrisStatOntime" style="color:#34d399;">26</div>
+              </div>
+              <div class="hris-stat-card">
+                <div class="hris-stat-label">Terlambat</div>
+                <div class="hris-stat-val" id="hrisStatLate" style="color:#f87171;">2</div>
+              </div>
+              <div class="hris-stat-card">
+                <div class="hris-stat-label">Izin / Sakit</div>
+                <div class="hris-stat-val" id="hrisStatLeave" style="color:#fbbf24;">2</div>
+              </div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="hris-table-container">
+              <table class="hris-table">
+                <thead>
+                  <tr>
+                    <th>Nama &amp; ID</th>
+                    <th>Jabatan</th>
+                    <th>Shift</th>
+                    <th>Scan Finger</th>
+                    <th>Status</th>
+                    <th>Denda Telat</th>
+                  </tr>
+                </thead>
+                <tbody id="hrisTableBody">
+                  <!-- Populated by app.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Preset Controls -->
+            <div style="display:flex; gap:6px; margin-top:auto; padding-top:4px;">
+              <button class="chip-btn" onclick="triggerHrisPreset(1)">🟢 Shift Pagi Normal</button>
+              <button class="chip-btn" onclick="triggerHrisPreset(2)" style="border-color:#ef4444; color:#f87171;">⚠️ Simulasi Telat 2 &amp; 7 Menit</button>
+              <button class="chip-btn" onclick="triggerHrisPreset(3)" style="border-color:var(--pmc-gold); color:var(--pmc-gold);">🏖️ Mode Santai di Pantai</button>
+            </div>
+          </div>
+
+          <!-- Inspector & Escalation Card (Kanan) -->
+          <div class="inspector-card">
+            <div class="inspector-header">
+              <span class="inspector-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                Fleek Anomaly Detection &amp; WhatsApp Alert
+              </span>
+              <span class="wa-header-pill" style="color:var(--pmc-gold); border-color:var(--pmc-gold);">REAL-TIME AUDIT</span>
+            </div>
+
+            <div class="inspector-body">
+              <div style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+                <b>Disiplin Otomatis Tanpa Manual Checking:</b> Begitu staf telat scan di mesin fingerprint, Fleek AI otomatis mengirim WhatsApp peringatan denda ke staf &amp; rekap ke PIC HRD.
+              </div>
+
+              <!-- Late Alert Notification Box -->
+              <div class="late-alert-box" id="lateAlertCard">
+                <div class="late-alert-header">
+                  <span>🚨 NOTIFIKASI KETERLAMBATAN OTOMATIS</span>
+                  <span style="font-size:0.62rem; font-family:var(--font-mono); color:#ef4444;">HRD ESCALATED</span>
+                </div>
+                <div style="font-size:0.71rem; color:#fff; line-height:1.45;" id="lateAlertDetail">
+                  <b>⚠️ 2 Anomali Keterlambatan Terdeteksi Otomatis:</b><br>
+                  1. <b>Ahmad Fauzi (Teller):</b> Scan 08:02 WIB (+2 menit). Denda sistem Rp 25.000.<br>
+                  2. <b>Rian Hidayat (Kurir):</b> Scan 08:07 WIB (+7 menit). Denda sistem Rp 50.000.<br>
+                  <i>Fleek AI otomatis mengirim WA peringatan ke staf &amp; push rekap ke WhatsApp PIC HRD!</i>
+                </div>
+              </div>
+
+              <!-- Executive Single-Screen Highlight -->
+              <div class="cyber-decor" style="padding:0.7rem 0.85rem; background:#141413; border-left:3px solid var(--pmc-green);">
+                <div style="font-size:0.68rem; color:var(--pmc-green); font-family:var(--font-outfit); font-weight:800; margin-bottom:0.25rem; text-transform:uppercase;">
+                  Owner Peace-of-Mind (Ngopi di Pantai):
+                </div>
+                <div style="font-size:0.72rem; color:var(--home-fg-1); line-height:1.4;">
+                  Pak Budi tidak perlu buka ERP. Jam 08:30 WIB setiap pagi, Fleek AI kirim Morning Digest ke WhatsApp Pak Budi: <i>"Pagi Pak Budi! 28 Hadir, 2 Telat. Operasional kasir aman."</i>
+                </div>
+              </div>
+
+              <!-- Live Reasoning Code -->
+              <div class="json-code-box" id="hrisReasoningLog">
+// Fleek AI Copilot Trigger:
+{
+  "late_detected": [
+    {"staff": "Ahmad Fauzi", "late_minutes": 2, "penalty": 25000, "wa_alert_sent": true},
+    {"staff": "Rian Hidayat", "late_minutes": 7, "penalty": 50000, "wa_alert_sent": true}
+  ],
+  "action": "AUTO_PUSH_WHATSAPP_TO_STAFF_AND_RECORD_TO_ERP"
+}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 06: 🔥 INTERACTIVE DEMO 2 — WHATSAPP SALES GATEKEEPER
+         ============================================================ -->
+    <section id="demo-gatekeeper" class="slide-panel slide-demo">
+      <div class="section-content">
+        <span class="sect-meta">// LIVE_DEMO_02: THE FOREX GATEKEEPER ENGINE</span>
+        <div class="project-header" style="margin-bottom:0.35rem;">
+          <span class="project-tag" style="border-color:var(--pmc-green); color:var(--pmc-green); background:var(--pmc-green-dim);">Demo 2 • WhatsApp AI Sales Gatekeeper</span>
+          <h2 class="project-name animate-text" style="font-size:1.55rem;">
+            Kurs Real-Time (Anti-Harga Basi), Filter Prospek &amp; Strict Non-Payment
+          </h2>
+        </div>
+
+        <div class="split-demo-grid">
+          <!-- WhatsApp Chat Simulator (Kiri) -->
+          <div class="wa-mock-card">
+            <div class="wa-mock-header">
+              <div class="wa-mock-profile">
+                <div class="wa-avatar">PMC</div>
+                <div class="wa-name-group">
+                  <span class="wa-name">
+                    Pusat Money Changer 
+                    <svg class="wa-badge-verified" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </span>
+                  <span class="wa-status">● Online // Real-Time Forex Rate Gateway</span>
+                </div>
+              </div>
+              <span class="wa-header-pill">AI GATEKEEPER</span>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="wa-chat-body" id="gatekeeperChatBody">
+              <div class="wa-bubble-container ai">
+                <div class="wa-bubble ai">
+                  Halo, selamat datang di <b>Pusat Money Changer</b> 💵✨<br>
+                  Ada kebutuhan penukaran valuta asing atau info kurs hari ini? Silakan sebutkan mata uang dan nominal yang Anda butuhkan.
+                  <span class="wa-bubble-time">10:00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Preset Chips -->
+            <div class="wa-preset-chips">
+              <button class="chip-btn" onclick="triggerGatekeeperPreset(1)">💵 Tanya Kurs USD ($100)</button>
+              <button class="chip-btn" onclick="triggerGatekeeperPreset(2)">🤝 Tukar SGD 5,000 (Eskalasi Sales)</button>
+              <button class="chip-btn" onclick="triggerGatekeeperPreset(3)" style="border-color:#ef4444; color:#f87171;">🚫 Kirim Bukti Transfer (Test Cekat)</button>
+              <button class="chip-btn reset-chip" onclick="resetGatekeeperChat()" title="Reset Percakapan">🔄 Reset</button>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form class="wa-input-bar" onsubmit="handleGatekeeperSubmit(event)">
+              <input type="text" id="gatekeeperInput" class="wa-input-field" placeholder="Ketik pesan nasabah atau klik tombol preset di atas..." autocomplete="off">
+              <button type="submit" class="wa-send-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Inspector & Escalation Card (Kanan) -->
+          <div class="inspector-card">
+            <div class="inspector-header">
+              <span class="inspector-title" style="color:var(--pmc-green);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Rate Engine &amp; Handover to 5 Sales Admins
+              </span>
+              <span class="intent-memory-badge" id="leadIntentBadge" style="font-family:var(--font-mono); font-size:0.65rem; color:var(--pmc-green);">INTENT: INQUIRY_KURS</span>
+            </div>
+
+            <div class="inspector-body">
+              <div style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+                <b>Gatekeeper Function:</b> Mengeliminasi pertanyaan berulang dan menangani objection awal, lalu membagi prospek matang secara adil ke <b>5 Admin Sales Offline</b>.
+              </div>
+
+              <!-- Live Extracted Lead Metadata -->
+              <div class="cyber-decor" style="padding:0.65rem 0.85rem; background:#141413;">
+                <div style="font-size:0.68rem; color:var(--pmc-gold); font-family:var(--font-outfit); font-weight:800; margin-bottom:0.35rem; text-transform:uppercase;">
+                  Lead Profiling &amp; Sales Handover:
+                </div>
+                <div style="display:flex; flex-direction:column; gap:0.3rem; font-size:0.71rem;">
+                  <div style="display:flex; justify-content:space-between;"><span>Mata Uang Target:</span> <strong id="leadCurrency" style="color:#fff;">USD / SGD</strong></div>
+                  <div style="display:flex; justify-content:space-between;"><span>Estimasi Nilai Tukar:</span> <strong id="leadVolume" style="color:#fff;">Belum Terkualifikasi</strong></div>
+                  <div style="display:flex; justify-content:space-between;"><span>Alokasi Admin Sales:</span> <strong id="leadSalesAssigned" style="color:var(--pmc-green);">Standby (5 Admin Sales)</strong></div>
+                </div>
+              </div>
+
+              <!-- Strict Non-Payment Warning Card (Muncul saat Preset 3) -->
+              <div id="strictGuardrailBanner" style="display:none; background:rgba(239, 68, 68, 0.1); border:1px solid #ef4444; border-radius:6px; padding:0.6rem 0.8rem; flex-direction:column; gap:0.25rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="color:#f87171; font-size:0.75rem;">🛡️ STRICT NON-PAYMENT GUARDRAIL AKTIF</strong>
+                  <span class="stamp-confidential" style="font-size:0.55rem;">ANTI-SCAM</span>
+                </div>
+                <p style="font-size:0.71rem; color:#fff; line-height:1.4; margin:0;">
+                  Sistem AI secara tegas <b>MENOLAK validasi lunas otomatis</b> pada foto struk/bukti transfer. Resi diteruskan ke Tim Finance Manusia untuk dicocokkan dengan mutasi rekening bank resmi.
+                </p>
+              </div>
+
+              <!-- Live Reasoning Code -->
+              <div class="json-code-box" id="gatekeeperReasoningLog">
+// Fleek AI Gatekeeper State:
+{
+  "status": "LISTENING",
+  "realtime_rate_source": "ERP_DATABASE_API",
+  "rate_latency_ms": 35,
+  "auto_payment_validation": "STRICTLY_DISABLED"
+}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 07: DEEP-DIVE STRICT NON-PAYMENT & HUMAN HANDOVER
+         ============================================================ -->
+    <section id="strict-guardrail" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_GOVERNANCE: STRICT NON-PAYMENT &amp; ANTI-FRAUD</span>
+        <div class="project-header">
+          <span class="project-tag" style="border-color:#ef4444; color:#ef4444; background:rgba(239,68,68,0.1);">Zero-Risk Financial Policy</span>
+          <h2 class="project-name animate-text">
+            Menghapus Trauma Cekat AI: Batasan Mutlak Non-Payment &amp; Validasi Manusia
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:1.2rem; margin-top:0.4rem;">
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid #ef4444;">
+            <h4 style="font-family:var(--font-outfit); font-size:1.05rem; color:#f87171; margin-bottom:0.5rem;">
+              Kenapa Cekat AI Gagal dan Solusi Proteksi Fleek
+            </h4>
+            <p style="font-size:0.78rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.75rem;">
+              Pada sistem chatbot lama yang dipakai Pak Budi, bot dibiarkan memproses teks struk dan otomatis mengubah status transaksi menjadi <i>"LUNAS"</i>. Akibatnya nasabah nakal bisa mengirim bukti transfer palsu / editan dan kas money changer merugi:
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem; font-size:0.76rem; color:var(--home-fg-1);">
+              <li>🚫 <b>Zero AI Settlement:</b> AI Fleek <b>DILARANG KERAS</b> mengubah status transaksi menjadi 'LUNAS'. Status lunas hanya bisa di-input secara manual oleh Teller / Finance resmi.</li>
+              <li>⚡ <b>Real-Time Rate Hook:</b> Kurs ditarik dari live database detik itu juga. Tidak ada lagi pesan tertunda 3 jam dengan harga basi.</li>
+              <li>👥 <b>5 Admin Sales Routing:</b> Chatbot berfungsi sebagai gatekeeper (satpam depan), bukan penutup transaksi valas bernilai tinggi.</li>
+            </ul>
+          </div>
+
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid var(--pmc-green);">
+            <div style="font-family:var(--font-outfit); font-size:0.75rem; font-weight:800; color:var(--pmc-green); text-transform:uppercase; margin-bottom:0.3rem;">
+              Alur Verifikasi Keuangan Dua Lapis (Two-Factor Human Check)
+            </div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.95rem; color:#fff; margin-bottom:0.4rem;">
+              Nasabah Kirim Bukti ➔ Validasi Mutasi Bank oleh Orang
+            </h4>
+            <p style="font-size:0.76rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.65rem;">
+              Saat nasabah mengirim foto struk pembayaran di WhatsApp:
+            </p>
+            <div style="background:#111; padding:0.65rem 0.8rem; border-radius:4px; border:1px solid #333; font-size:0.72rem; color:#a7f3d0; line-height:1.45;">
+              1. AI meneruskan gambar struk ke WhatsApp Tim Finance &amp; sistem database.<br>
+              2. Finance mengecek rekening koran / m-Banking resmi money changer.<br>
+              3. Jika dana efektif masuk, barulah staf finance klik tombol verifikasi di sistem.<br>
+              4. Teller di counter baru diizinkan menyerahkan fisik valuta asing ke nasabah.
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:0.65rem; padding:0.55rem 0.95rem; background:rgba(239, 68, 68, 0.08); border:1px solid #ef4444; border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.74rem; color:#fca5a5; font-weight:600;">
+            🛡️ <b>Klausul Keamanan Finansial:</b> Fleek memberikan jaminan arsitektur bahwa tidak ada logika AI yang dapat melakukan otorisasi pengeluaran kas atau pengesahan pembayaran.
+          </span>
+          <span class="stamp-confidential" style="font-size:0.58rem;">ZERO FINANCIAL RISK</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 08: IT SECURITY & DATA GOVERNANCE GATE (FOR MAS YOEL)
+         ============================================================ -->
+    <section id="security-gate" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_SECURITY: ENTERPRISE DATA GOVERNANCE &amp; FRAMEWORK</span>
+        <div class="project-header">
+          <span class="project-tag" style="border-color:#10b981; color:#10b981; background:rgba(16,185,129,0.1);">Khusus Pembahasan Mas Yoel (IT Partner)</span>
+          <h2 class="project-name animate-text">
+            Framework Keamanan Data Finansial &amp; Proteksi Sensitif Money Changer
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1rem; margin-top:0.4rem;">
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-green);">
+            <div style="font-family:var(--font-outfit); font-size:1.1rem; font-weight:900; color:var(--pmc-green); margin-bottom:0.25rem;">01. ISOLASI DATA</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.88rem; color:#fff; margin-bottom:0.35rem;">PostgreSQL Schema Isolation</h4>
+            <p style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+              Setiap perusahaan memiliki schema database terisolasi mandiri (<code>tenant_uuid</code>). Hosted di <b>Biznet Gio VPS Indonesia (IP 103.93.129.172)</b> menjamin kepatuhan data finansial lokal.
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-gold);">
+            <div style="font-family:var(--font-outfit); font-size:1.1rem; font-weight:900; color:var(--pmc-gold); margin-bottom:0.25rem;">02. PENTEST AUDIT</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.88rem; color:#fff; margin-bottom:0.35rem;">OWASP WSTG v4.2 Certified</h4>
+            <p style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+              Sistem telah lulus pengujian white-box pentest OWASP. Dilindungi proteksi CSRF, Anti-SQL Injection PDO binding, dan throttling anti-bruteforce (maks 5 req/mnt).
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--home-accent);">
+            <div style="font-family:var(--font-outfit); font-size:1.1rem; font-weight:900; color:var(--home-accent); margin-bottom:0.25rem;">03. REGULASI PDP</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.88rem; color:#fff; margin-bottom:0.35rem;">Kepatuhan UU PDP 27/2022</h4>
+            <p style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+              Memenuhi standar UU PDP: hak portabilitas data mandiri (Export ZIP/CSV), pencatatan audit log 10 tahun (UU KUP pasal 28), dan klausul zero-training data publik pada Enterprise AI.
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1rem; border-top:3px solid var(--pmc-blue);">
+            <div style="font-family:var(--font-outfit); font-size:1.1rem; font-weight:900; color:var(--pmc-blue); margin-bottom:0.25rem;">04. KONTROL RBAC</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.88rem; color:#fff; margin-bottom:0.35rem;">3-Tier Granular Boundary</h4>
+            <p style="font-size:0.73rem; color:var(--home-fg-2); line-height:1.4;">
+              Hak akses tegas: <b>Owner (Pak Budi)</b> kontrol penuh, <b>Admin (Mas Yoel/HRD)</b> approval operasional, dan <b>Staff (Teller/Kurir)</b> dilarang keras melihat ringkasan keuangan/laba rugi.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:0.7rem; padding:0.6rem 1rem; background:rgba(16, 185, 129, 0.08); border:1px solid var(--pmc-green); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.75rem; color:#d1fae5; line-height:1.4;">
+            🤝 <b>Legal &amp; Security Shield:</b> Pusat Money Changer memegang hak kepemilikan data 100%. Fleek menandatangani NDA resmi perlindungan data finansial sebelum sprint dimulai.
+          </span>
+          <span class="stamp-confidential stamp-pmc" style="font-size:0.58rem;">AUDITED &amp; COMPLIANT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 09: ENTERPRISE QUOTATION & OPEX TRANSPARENCY
+         ============================================================ -->
+    <section id="commercial-quote" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_COMMERCIAL: STRUKTUR INVESTASI BELI PUTUS &amp; OPEX BULANAN</span>
+        <div class="project-header" style="margin-bottom:0.3rem;">
+          <span class="project-tag" style="border-color:var(--pmc-green); color:var(--pmc-green); background:var(--pmc-green-dim);">Official Quotation</span>
+          <h2 class="project-name animate-text" style="font-size:1.55rem;">
+            Investasi Sistem Beli Putus All-in-One &amp; Estimasi OpEx Transparan
+          </h2>
+        </div>
+
+        <!-- 2-Column Split: One-Time Setup vs Monthly OpEx Pass-Through -->
+        <div class="pricing-enterprise-split">
+          <!-- Kolom 1: One-Time All-in-One (Rp 50 Juta) -->
+          <div class="pricing-card featured">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="pricing-tier-tag" style="color:var(--pmc-green);">KOMPONEN 1 // FLEEK AI ENGINE (BELI PUTUS)</span>
+              <span class="stamp-confidential stamp-pmc" style="font-size:0.55rem;">100% SOURCE CODE</span>
+            </div>
+            <div class="pricing-tier-price" style="color:var(--pmc-green);">
+              Rp 50.000.000,- <span style="color:var(--home-fg-2); font-size:0.85rem;">/ one-time investment</span>
+            </div>
+            
+            <!-- Termin Pembayaran -->
+            <div style="background:#151514; border:1px solid #282826; border-radius:6px; padding:0.4rem 0.65rem; margin-bottom:0.45rem; display:flex; justify-content:space-between; font-size:0.7rem;">
+              <div><span>Termin 1 (DP 50% Kickoff):</span> <strong style="color:var(--pmc-gold);">Rp 25.000.000</strong></div>
+              <div><span>Termin 2 (Pelunasan 50% Live):</span> <strong style="color:#10b981;">Rp 25.000.000</strong></div>
+            </div>
+
+            <ul class="pricing-feature-list">
+              <li>🌟 <b>Fleek AI Core Engine:</b> Central Intelligent Hub terhubung ke database ERP &amp; hardware.</li>
+              <li>🌟 <b>Fingerprint Hardware Bridge:</b> Integrasi mesin absensi kantor via API / Local Bridge.</li>
+              <li>🌟 <b>WhatsApp Copilot Karyawan:</b> Peringatan keterlambatan (2 &amp; 7 menit) + denda otomatis.</li>
+              <li>🌟 <b>Owner Morning &amp; Evening Digest:</b> Rekap harian presensi &amp; omzet ke WA Pak Budi.</li>
+              <li>🌟 <b>WhatsApp Sales Gatekeeper AI:</b> Cek kurs live &amp; routing ke 5 admin sales offline.</li>
+              <li>🌟 <b>Strict Non-Payment Guardrail:</b> Proteksi anti-fraud struk transfer palsu.</li>
+              <li>🌟 <b>Kepemilikan Penuh (Beli Putus):</b> Bebas biaya royalti software Fleek (Hak milik klien).</li>
+              <li>🌟 <b>Garansi UAT &amp; Pendampingan 30 Hari:</b> Pelatihan admin &amp; panduan teknis token.</li>
+            </ul>
+          </div>
+
+          <!-- Kolom 2: Monthly OpEx Pass-Through -->
+          <div class="pricing-card">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="pricing-tier-tag" style="color:var(--pmc-gold);">KOMPONEN 2 // OPEX BULANAN TRANSFARAN</span>
+              <span class="wa-header-pill" style="font-size:0.55rem; color:#10b981; border-color:#10b981;">BIAYA MURNI</span>
+            </div>
+            <div class="pricing-tier-price" style="color:var(--pmc-gold); font-size:1.4rem;">
+              ~Rp 670.000 – Rp 950.000 <span style="color:var(--home-fg-2); font-size:0.8rem;">/ bulan</span>
+            </div>
+            
+            <p style="font-size:0.69rem; color:var(--home-fg-3); line-height:1.3; margin:0 0 0.25rem 0;">
+              Biaya operasional riil bulanan (Santra ERP partner + infrastruktur server &amp; AI mandiri):
+            </p>
+
+            <div class="opex-breakdown-list">
+              <div class="opex-item">
+                <div class="opex-item-info">
+                  <span class="opex-item-title">📦 Santra ERP Subscription (Partner Database)</span>
+                  <span class="opex-item-desc">Langganan bulanan software ERP (Paket Basic / Global)</span>
+                </div>
+                <span class="opex-item-price" style="color:var(--pmc-gold); font-weight:700;">Start Rp 300.000</span>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-item-info">
+                  <span class="opex-item-title">🖥️ Server Cloud VPS (Host Database &amp; Gateway)</span>
+                  <span class="opex-item-desc">Dedicated CPU &amp; RAM untuk uptime sistem 24/7</span>
+                </div>
+                <span class="opex-item-price" style="color:#fff;">Rp 150.000</span>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-item-info">
+                  <span class="opex-item-title">🧠 Token AI NLU (Gemini API)</span>
+                  <span class="opex-item-desc">Biaya pemrosesan chat bahasa natural per percakapan</span>
+                </div>
+                <span class="opex-item-price" style="color:#fff;">~Rp 220k – 450k</span>
+              </div>
+
+              <div class="opex-item">
+                <div class="opex-item-info">
+                  <span class="opex-item-title">💬 WhatsApp Gateway Resmi (Self-Hosted)</span>
+                  <span class="opex-item-desc">Tanpa biaya per-pesan ke Meta (Rp 0 per-chat)</span>
+                </div>
+                <span class="opex-item-price" style="color:#10b981;">Rp 0 (Included)</span>
+              </div>
+            </div>
+
+            <!-- Guardrail Box -->
+            <div style="background:#151514; border:1px solid #282826; border-radius:5px; padding:0.4rem 0.65rem; font-size:0.68rem; color:var(--home-fg-2); line-height:1.35; margin-top:2px;">
+              🔒 <b>Threshold Anti-Boncos:</b> Sesi chat dibatasi maks 6–8 bubble sebelum otomatis dialihkan ke admin manusia. Biaya token bulanan aman terkendali.
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator Box -->
+        <div class="interactive-calc-box" style="margin-top:0.35rem;">
+          <div class="calc-slider-row">
+            <div>
+              <span style="font-size:0.72rem; color:var(--home-fg-1); font-weight:700;">Simulasi Volume Chat Nasabah:</span>
+              <span id="chatVolumeDisplay" style="font-family:var(--font-outfit); font-weight:900; color:var(--pmc-green); font-size:0.95rem; margin-left:6px;">1,000 Chat</span>
+            </div>
+            <input type="range" id="chatVolumeSlider" class="calc-slider" min="200" max="2500" step="100" value="1000" oninput="updateCostCalculation(this.value)" style="width:40%;">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #2a2a28; padding-top:0.35rem; font-size:0.75rem;">
+            <span>Estimasi Total Berjalan / Bulan (Santra ERP + Server + Token AI):</span>
+            <strong id="costEstimateDisplay" style="font-family:var(--font-outfit); font-size:1.05rem; color:#10b981;">Rp 670,000 / bln</strong>
+          </div>
+          <div id="costBreakdownDetail" style="font-size:0.65rem; color:var(--home-fg-3); display:flex; justify-content:space-between;">
+            <span>Santra ERP: Rp 300.000</span>
+            <span>Server VPS: Rp 150.000</span>
+            <span>Token AI: ~Rp 220.000</span>
+            <span>WhatsApp API: Rp 0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 10: PHASE 2 ROADMAP — ACCOUNTING & FOREX MARGIN SYNC
+         ============================================================ -->
+    <section id="phase2-finance" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// WORKSTREAM_FINANCE: FUTURE VALUE EXPANSION</span>
+        <div class="project-header">
+          <span class="project-tag">Fase 2 • Lanjutan Pasca HRIS</span>
+          <h2 class="project-name animate-text">
+            Roadmap Modul Accounting &amp; Real-Time Forex Margin Sync
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:0.5rem;">
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid var(--pmc-green);">
+            <h4 style="font-family:var(--font-outfit); font-size:1.05rem; color:#fff; margin-bottom:0.4rem;">
+              Koneksi Otomatis ke Modul Keuangan Database ERP
+            </h4>
+            <p style="font-size:0.78rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.65rem;">
+              Setelah fondasi orang (HRIS) tertata rapi di Bulan 1, sistem siap dikembangkan untuk mengotomasi alur kas dan akuntansi money changer tanpa ganti aplikasi:
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.75rem; color:var(--home-fg-1);">
+              <li>📊 <b>Input Kasir Cepat (/catat-cepat):</b> Teller kasir mencatat pengeluaran operasional harian secara instan tanpa perlu paham jurnal akuntansi debet-kredit.</li>
+              <li>📈 <b>Buku Kasir Gaya Mutasi Bank (/riwayat):</b> Riwayat keluar-masuk uang kasir counter teller tercatat per transaksi secara transparan dan audit-proof.</li>
+              <li>💼 <b>Ringkasan Saldo Brankas (/ringkasan-saldo):</b> Rekonsiliasi fisik uang tunai di brankas baja dengan status seimbang (Assets = Liabilities + Equity).</li>
+              <li>📑 <b>Ekspor Laba Rugi &amp; Neraca Otomatis:</b> Download PDF laporan laba bersih dan neraca uang valas langsung dari sistem tanpa rekap Excel manual.</li>
+            </ul>
+          </div>
+
+          <div class="cyber-decor" style="padding:1.1rem; border-left:4px solid var(--pmc-gold);">
+            <h4 style="font-family:var(--font-outfit); font-size:1.05rem; color:var(--pmc-gold); margin-bottom:0.4rem;">
+              Laporan Keuangan Eksekutif untuk Owner
+            </h4>
+            <p style="font-size:0.78rem; color:var(--home-fg-2); line-height:1.45; margin-bottom:0.7rem;">
+              Pak Budi mendapatkan laporan laba-rugi harian dan posisi likuiditas valas tanpa perlu menunggu rekap staf:
+            </p>
+            <div class="json-code-box">
+// Sample Daily Forex Financial Summary:
+{
+  "date": "2026-10-06",
+  "total_turnover_idr": "Rp 1.480.500.000",
+  "gross_spread_profit": "Rp 24.620.000",
+  "top_traded_currencies": ["USD", "SGD", "EUR", "JPY"],
+  "cash_vault_status": "BALANCED_100%",
+  "payroll_late_deductions": "Rp 75.000"
+}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 11: IMPLEMENTATION ROADMAP (2.5 - 3 MONTHS ROLLOUT)
+         ============================================================ -->
+    <section id="timeline" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_MILESTONE: 2.5 - 3 MONTHS ENGINEERING ROADMAP</span>
+        <div class="project-header">
+          <span class="project-tag" style="border-color:var(--pmc-green); color:var(--pmc-green); background:var(--pmc-green-dim);">Target 2,5 – 3 Bulan (Enterprise Stability)</span>
+          <h2 class="project-name animate-text">
+            Roadmap 2,5 – 3 Bulan: Dari Hardware Fingerprint hingga Full Go-Live
+          </h2>
+        </div>
+
+        <div class="timeline-pipeline">
+          <div class="timeline-step active">
+            <div class="timeline-node">1</div>
+            <div class="timeline-meta">Bulan 1 (Mgg 1–3)</div>
+            <h5 class="timeline-title">DB Core &amp; Audit Hardware</h5>
+            <p class="timeline-desc">
+              Konfigurasi master database 30 staf &amp; shift, isolasi PostgreSQL, dan audit fisik protokol mesin fingerprint di kantor (ADMS / Local Bridge).
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-node">2</div>
+            <div class="timeline-meta">Bulan 1.5 (Mgg 4–6)</div>
+            <h5 class="timeline-title">Fingerprint Bridge &amp; Denda</h5>
+            <p class="timeline-desc">
+              Pembangunan microservice penerima log scan jari, logic denda telat menit (+2 mnt = Rp 25k, +7 mnt = Rp 50k), dan trigger push WA peringatan.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-node">3</div>
+            <div class="timeline-meta">Bulan 2 (Mgg 7–9)</div>
+            <h5 class="timeline-title">WA Gatekeeper &amp; Anti-Fraud</h5>
+            <p class="timeline-desc">
+              Integrasi WhatsApp Gateway, NLU cek kurs live &lt;2 detik, routing ke 5 admin sales offline, dan implementasi Strict Guardrail penolakan bukti bayar palsu.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-node">4</div>
+            <div class="timeline-meta">Bulan 2.5–3 (Mgg 10–12)</div>
+            <h5 class="timeline-title">UAT On-Site, Digest &amp; Go-Live</h5>
+            <p class="timeline-desc">
+              Uji coba paralel (Shadow Run) 2 minggu di kantor, aktivasi Owner Beach Digest (08:30 &amp; 17:30), training staf admin, dan official handover beli putus.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:1.4rem; padding:0.75rem 1.1rem; background:var(--card-bg); border:1px solid var(--window-border); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.77rem; color:var(--home-fg-1);">
+            🚀 <b>Standar Engineering Lead Fleek:</b> Alokasi 2,5 – 3 Bulan menjamin integrasi mesin fisik kantor, fail-safe offline memory 100k log, dan proteksi anti-scam diuji 100% bebas celah bug finansial!
+          </span>
+          <span class="stamp-confidential stamp-pmc" style="font-size:0.6rem;">ENTERPRISE STABILITY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SLIDE 12: CLOSING & NEXT STEPS
+         ============================================================ -->
+    <section id="closing-cta" class="slide-panel">
+      <div class="section-content">
+        <span class="sect-meta">// SYS_ACTION: NEXT STEPS &amp; KICKOFF</span>
+        <div class="project-header">
+          <span class="project-tag" style="border-color:var(--home-accent); color:var(--home-accent); background:rgba(255,0,51,0.1);">Langkah Selanjutnya</span>
+          <h2 class="project-name animate-text">
+            Siap Mengamankan Operasional &amp; Pantau Bisnis dari Satu Pintu?
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem; margin-top:0.6rem;">
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--pmc-green);">
+            <div style="font-family:var(--font-outfit); font-size:1.3rem; font-weight:900; color:var(--pmc-green); margin-bottom:0.25rem;">STEP 1</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.95rem; color:#fff; margin-bottom:0.35rem;">Technical Discovery Fingerprint</h4>
+            <p style="font-size:0.76rem; color:var(--home-fg-2); line-height:1.4;">
+              Sesi 30 menit antara engineering Fleek dan Mas Yoel untuk konfirmasi merek &amp; port IP mesin fingerprint (Skenario 1, 2, atau 3).
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--pmc-gold);">
+            <div style="font-family:var(--font-outfit); font-size:1.3rem; font-weight:900; color:var(--pmc-gold); margin-bottom:0.25rem;">STEP 2</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.95rem; color:#fff; margin-bottom:0.35rem;">Finalisasi Roster Staf &amp; Denda</h4>
+            <p style="font-size:0.76rem; color:var(--home-fg-2); line-height:1.4;">
+              Penyepakatan daftar 30 karyawan, pembagian shift kerja, dan nominal denda keterlambatan menit (misal telat 2 &amp; 7 menit).
+            </p>
+          </div>
+
+          <div class="cyber-decor" style="padding:1.1rem; border-top:3px solid var(--home-accent);">
+            <div style="font-family:var(--font-outfit); font-size:1.3rem; font-weight:900; color:var(--home-accent); margin-bottom:0.25rem;">STEP 3</div>
+            <h4 style="font-family:var(--font-outfit); font-size:0.95rem; color:#fff; margin-bottom:0.35rem;">Kick-Off Sprint 1</h4>
+            <p style="font-size:0.76rem; color:var(--home-fg-2); line-height:1.4;">
+              Penandatanganan kontrak beli putus, penandatanganan NDA keamanan data finansial, dan pembuatan staging environment.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; padding:1rem 1.4rem; background:linear-gradient(90deg, rgba(16,185,129,0.1), rgba(229,169,60,0.1)); border:1px solid var(--pmc-green); border-radius:8px;">
+          <div>
+            <div style="font-family:var(--font-outfit); font-size:1rem; font-weight:800; color:#fff;">
+              Jadwalkan Technical Discovery Bersama Mas Yoel &amp; Tim Fleek
+            </div>
+            <div style="font-size:0.75rem; color:var(--home-fg-2);">
+              Hubungi Alif Yusfan (AE Fleek Project) // Sesi Demo &amp; Konfirmasi API
+            </div>
+          </div>
+          <button class="btn-cyber active" style="background:var(--pmc-green); color:#111; font-weight:900; padding:8px 16px; border:none; cursor:pointer;" onclick="triggerToast('⚡ Permintaan Kickoff Technical Discovery dicatat!')">
+            KICK-OFF TECHNICAL DISCOVERY →
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="deckToast" class="deck-toast">
+    <span>⚡</span> <span id="deckToastText">Notifikasi Sistem</span>
+  </div>
+
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
