@@ -18,7 +18,7 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
 | **06** | `demo-gatekeeper` | **🔥 LIVE DEMO 2:** WhatsApp Sales Gatekeeper (Cek kurs USD/SGD real-time <50ms, filter nominal, eskalasi instan ke 5 admin sales offline, Strict Non-Payment banner). |
 | **07** | `strict-guardrail` | **Deep-Dive Governance: Strict Non-Payment & Anti-Fraud:** Pembuktian AI dilarang keras memvalidasi transfer uang/lunas demi mencegah kerugian seperti Cekat AI. |
 | **08** | `security-gate` | **Keamanan & Privasi Data (Non-Teknis & Ramah Bisnis):** Data 100% milik klien dilindungi NDA resmi, Server privat mandiri di Indonesia, AI tanpa simpan rahasia transaksi, Pembagian kunci akses staf berlapis (staf tidak bisa intip keuangan). |
-| **09** | `commercial-quote` | **Quotation Beli Putus All-in-One (Rp 35 Jt) & OpEx Transparan:** DP 50% & Pelunasan 50% (Rp 17,5 Jt) atau opsi cashflow 4x milestone, simulasi biaya bulanan server & token, Threshold Guardrail 6–8 bubble. |
+| **09** | `commercial-quote` | **Quotation Beli Putus All-in-One (Rp 35 Jt) & OpEx Transparan:** Skema saklek 2x termin (DP 50% Rp 17,5 Jt & Pelunasan 50% Rp 17,5 Jt), simulasi biaya bulanan server & token, Threshold Guardrail 6–8 bubble. |
 | **10** | `phase2-finance` | **Roadmap Fase 2: Accounting & Real-Time Forex Margin Sync:** Fondasi integrasi rekonsiliasi kasir teller harian dan spread margin valas otomatis. |
 | **11** | `timeline` | **2,5 – 3 Bulan Engineering Roadmap:** Bulan 1 (Mgg 1–3) DB Core & Audit Hardware, Bulan 1.5 (Mgg 4–6) Fingerprint Bridge & Denda, Bulan 2 (Mgg 7–9) WA Gatekeeper & Anti-Fraud, Bulan 2.5–3 (Mgg 10–12) UAT On-Site, Digest & Go-Live. |
 | **12** | `closing-cta` | **Next Steps & Technical Handshake:** 3 Langkah konkrit menuju Kickoff Sprint 1 bersama tim IT Pusat Money Changer. |
@@ -123,15 +123,12 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
 
 ---
 
-## 💰 Struktur Komersial & Fleksibilitas Termin (Slide 09)
+## 💰 Struktur Komersial & Termin Pembayaran (Slide 09)
 
 - **Investasi Pengembangan Fleek AI Core (One-Time Setup):** **Rp 35.000.000,- (Beli Putus)**.
-  - **Opsi Standar (2x Termin):** DP 50% (Rp 17,5 Jt) & Pelunasan 50% (Rp 17,5 Jt).
-  - **Opsi Cashflow Fleksibel (4x Milestone Pembayaran):**
-    - **Termin 1 (DP Kickoff & Audit DB):** 30% = **Rp 10.500.000,-**
-    - **Termin 2 (Sprint 1 DB Core & Fingerprint Bridge):** 30% = **Rp 10.500.000,-**
-    - **Termin 3 (Sprint 2 WA Gatekeeper & UAT On-site):** 20% = **Rp 7.000.000,-**
-    - **Termin 4 (Sprint 3 Go-Live & Handover):** 20% = **Rp 7.000.000,-**
+  - **Skema Saklek 2x Termin (50 : 50):**
+    - **Termin 1 (DP Kickoff 50%):** **Rp 17.500.000,-** (Saat kickoff & setup awal database/fingerprint).
+    - **Termin 2 (Pelunasan 50%):** **Rp 17.500.000,-** (Saat lolos UAT On-site & Handover sistem).
 - **Klarifikasi Scope Finance (SoW Rp 35 Jt vs Fase 2):**
   - **Sudah Termasuk di Rp 35 Jt:** Pembukuan kas dasar, COA 30+ akun, fitur Catat Cepat kasir teller, dan rekap denda staf (didukung Santra ERP).
   - **Fase 2 Lanjutan:** Rekonsiliasi fisik brankas valas multi-currency per detik adalah add-on pengembangan opsional setelah HR stabil.
