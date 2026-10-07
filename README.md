@@ -17,8 +17,8 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
 | **05** | `demo-hris` | **🔥 LIVE DEMO 1:** Owner Command Portal & HRIS Live Monitoring (Fingerprint feed 30 staf, deteksi telat 2 & 7 menit, denda otomatis, dan status teller/kurir). |
 | **06** | `demo-gatekeeper` | **🔥 LIVE DEMO 2:** WhatsApp Sales Gatekeeper (Cek kurs USD/SGD real-time <50ms, filter nominal, eskalasi instan ke 5 admin sales offline, Strict Non-Payment banner). |
 | **07** | `strict-guardrail` | **Deep-Dive Governance: Strict Non-Payment & Anti-Fraud:** Pembuktian AI dilarang keras memvalidasi transfer uang/lunas demi mencegah kerugian seperti Cekat AI. |
-| **08** | `security-gate` | **IT Security & Data Governance Gate (Khusus Mas Yoel):** Enkripsi AES-256 database, Dedicated VPS terisolasi, Zero-Training Data Gemini LLM, Role-Based Access Control (RBAC). |
-| **09** | `commercial-quote` | **Quotation Beli Putus All-in-One (Rp 50 Jt) & OpEx Transparan:** DP 50% & Pelunasan 50%, simulasi biaya bulanan server & token, Threshold Guardrail 6–8 bubble. |
+| **08** | `security-gate` | **Keamanan & Privasi Data (Non-Teknis & Ramah Bisnis):** Data 100% milik klien dilindungi NDA resmi, Server privat mandiri di Indonesia, AI tanpa simpan rahasia transaksi, Pembagian kunci akses staf berlapis (staf tidak bisa intip keuangan). |
+| **09** | `commercial-quote` | **Quotation Beli Putus All-in-One (Rp 35 Jt) & OpEx Transparan:** DP 50% & Pelunasan 50% (Rp 17,5 Jt) atau opsi cashflow 4x milestone, simulasi biaya bulanan server & token, Threshold Guardrail 6–8 bubble. |
 | **10** | `phase2-finance` | **Roadmap Fase 2: Accounting & Real-Time Forex Margin Sync:** Fondasi integrasi rekonsiliasi kasir teller harian dan spread margin valas otomatis. |
 | **11** | `timeline` | **2,5 – 3 Bulan Engineering Roadmap:** Bulan 1 (Mgg 1–3) DB Core & Audit Hardware, Bulan 1.5 (Mgg 4–6) Fingerprint Bridge & Denda, Bulan 2 (Mgg 7–9) WA Gatekeeper & Anti-Fraud, Bulan 2.5–3 (Mgg 10–12) UAT On-Site, Digest & Go-Live. |
 | **12** | `closing-cta` | **Next Steps & Technical Handshake:** 3 Langkah konkrit menuju Kickoff Sprint 1 bersama tim IT Pusat Money Changer. |
@@ -69,13 +69,25 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
 
 ## 🛠️ Matrix Kesiapan Mesin Fingerprint (Khusus Diskusi Mas Yoel)
 
-| Skenario | Jenis Mesin | Metode Koneksi | Biaya Dev Fleek |
+| Skenario | Jenis Mesin | Metode Koneksi | Batasan Tanggung Jawab |
 | :--- | :--- | :--- | :--- |
-| **Skenario 1 (Ideal)** | Mesin IoT Cloud (ADMS / PUSH Protocol) | Mesin langsung menembak HTTPS POST Port 443 ke Fleek AI Webhook setiap ada scan jari. | **Rp 0** (Included dalam paket Rp 50 Jt) |
-| **Skenario 2 (On-Prem)** | Mesin USB/LAN Lokal terhubung ke PC Kasir | Fleek memasang **Local Sync Agent (5 MB)** di PC kasir untuk memantau database lokal mesin dan forward ke cloud. | **Rp 0** (Included dalam paket Rp 50 Jt) |
-| **Skenario 3 (Jadul)** | Mesin Standalone Offline (Tarik Flashdisk) | Mesin tidak memiliki jaringan internet/LAN sama sekali. | Rekomendasi Fleek: Klien mengadakan mesin IoT Cloud baru (~Rp 1,5 Jt – 2,5 Jt) agar otomasi 100% berjalan. |
+| **Skenario 1 (Ideal)** | Mesin IoT Cloud (ADMS / PUSH Protocol) | Mesin menembak HTTPS POST Port 443 ke Fleek AI Webhook setiap jari nempel. | **Fleek:** Setup Cloud API Webhook (Rp 0 dev fee).<br>**Klien:** Hubungkan kabel LAN/Wi-Fi mesin. |
+| **Skenario 2 (On-Prem)** | Mesin USB/LAN Lokal terhubung ke PC Kasir | Fleek pasang **Local Sync Agent (5 MB)** di PC kasir untuk forward log ke cloud. | **Fleek:** Pasang script sync 5MB.<br>**Klien:** Sediakan 1 PC kasir yang nyala. |
+| **Skenario 3 (Jadul)** | Mesin Standalone Offline (Tarik Flashdisk) | Mesin tanpa jaringan LAN/Wi-Fi. Format rekonsiliasi manual seperti skema **Sainsgo**. | **Opsi Praktis:** Tim admin input/ekspor log mingguan ke dashboard, AI hitung denda.<br>**Opsi Ideal:** Klien upgrade unit IoT mandiri (~Rp 1,5–2,5 Jt). |
 
-> 🛡️ **Fail-Safe Offline Buffer:** Seluruh mesin fingerprint modern memiliki memori offline internal hingga 100.000 log. Jika Wi-Fi kantor terputus sementara, data presensi tersimpan aman di mesin dan otomatis tersinkronisasi saat internet kembali hidup. **Zero Data Loss**.
+> ⚙️ **Batasan Tegas Engineering Fleek:** Fleek adalah Software & AI Agency, **bukan teknisi servis perangkat keras**. Fleek bertanggung jawab 100% pada Cloud API, Webhook, dan Engine AI Pengolah Denda. Urusan fisik perkabelan dan setting internal mesin ditangani tim IT kantor Mas Yoel.
+> 🛡️ **Fail-Safe Offline Buffer:** Mesin fingerprint menyimpan hingga 100.000 log secara lokal jika internet kantor mati. Saat koneksi online kembali, log otomatis tersinkronisasi. Zero Data Loss.
+
+---
+
+## 💡 2 Opsi Pengelolaan Kurs Valas Harian (Solusi Zaidan & Lead AI)
+
+1. **Opsi 1 (Rekomendasi Utama — Input/Update Harian Tim Kantor):**
+   - Setiap pagi saat buka kas (dan saat terjadi fluktuasi harga), tim admin/teller money changer meng-update kurs patokan harian di sistem (Santra ERP / spreadsheet khusus).
+   - Bot WhatsApp Fleek membaca angka resmi tersebut dalam waktu **<2 detik**.
+   - **Kelebihan:** 100% aman, bebas selisih rugi, dan spread margin valas fisik berada dalam kontrol penuh owner (Pak Budi).
+2. **Opsi 2 (Live API Feed Pasar Valas Otomatis):**
+   - Bot WhatsApp menarik kurs pasar live otomatis dari provider API, lalu menerapkan formula spread margin tetap (contoh: Kurs Beli = Pasar - Rp 50, Kurs Jual = Pasar + Rp 70).
 
 ---
 
@@ -111,12 +123,18 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
 
 ---
 
-## 💰 Struktur Komersial & Transparansi Biaya (Slide 09)
+## 💰 Struktur Komersial & Fleksibilitas Termin (Slide 09)
 
-- **Investasi Pengembangan Fleek AI Core (One-Time Setup):** **Rp 50.000.000,- (Beli Putus)**.
-  - **Termin 1 (DP 50% Kickoff):** Rp 25.000.000,-
-  - **Termin 2 (Pelunasan 50% Pasca UAT & Live):** Rp 25.000.000,-
-  - **Hak Kepemilikan:** Seluruh source code & custom logic menjadi milik Pusat Money Changer (Bebas royalti agensi bulanan).
+- **Investasi Pengembangan Fleek AI Core (One-Time Setup):** **Rp 35.000.000,- (Beli Putus)**.
+  - **Opsi Standar (2x Termin):** DP 50% (Rp 17,5 Jt) & Pelunasan 50% (Rp 17,5 Jt).
+  - **Opsi Cashflow Fleksibel (4x Milestone Pembayaran):**
+    - **Termin 1 (DP Kickoff & Audit DB):** 30% = **Rp 10.500.000,-**
+    - **Termin 2 (Sprint 1 DB Core & Fingerprint Bridge):** 30% = **Rp 10.500.000,-**
+    - **Termin 3 (Sprint 2 WA Gatekeeper & UAT On-site):** 20% = **Rp 7.000.000,-**
+    - **Termin 4 (Sprint 3 Go-Live & Handover):** 20% = **Rp 7.000.000,-**
+- **Klarifikasi Scope Finance (SoW Rp 35 Jt vs Fase 2):**
+  - **Sudah Termasuk di Rp 35 Jt:** Pembukuan kas dasar, COA 30+ akun, fitur Catat Cepat kasir teller, dan rekap denda staf (didukung Santra ERP).
+  - **Fase 2 Lanjutan:** Rekonsiliasi fisik brankas valas multi-currency per detik adalah add-on pengembangan opsional setelah HR stabil.
 - **Langganan Santra ERP (Partner Database):** **Mulai dari Rp 300.000 / bulan** (Paket Basic / Global, langsung langganan ke Santra).
 - **OpEx Pihak Ketiga (Pass-Through Transparan Tanpa Markup):**
   - **Santra ERP Database:** Mulai Rp 300.000 / bulan (Tier Basic / Global).
@@ -124,18 +142,20 @@ Dirancang dengan standar baku **Fleek Arasaka Cyber Dark Theme (`#111110` base)*
   - **Token AI NLU (Gemini API):** ~Rp 220.000 – Rp 450.000 / bulan (tergantung volume 1.000–2.500 chat).
   - **WhatsApp API Gateway:** Rp 0 (Self-hosted, tanpa biaya per-pesan Meta).
   - **Estimasi Total Running Cost:** **~Rp 670.000 – Rp 900.000 / bulan** (All-in ERP + AI + Server).
-  - **Cost Protection:** Guardrail 6–8 bubble per sesi chat untuk mencegah pemborosan token.
 
 ---
 
-## 🛡️ Jawaban Taktis untuk Mas Yoel (IT Partner)
+## 🛡️ Panduan Jawaban Santai & Non-Teknis (Khusus Dimitri — Lead AI Engineer di Slide 08)
 
-| Pertanyaan Mas Yoel | Jawaban Teknis Fleek |
+*Gunakan analogi bisnis sederhana ini agar tidak perlu berdebat istilah teknis yang rumit bersama Pak Budi & Mas Yoel:*
+
+| Pertanyaan Klien / IT | Jawaban Santai & Non-Teknis (Lead AI Engineer) |
 | :--- | :--- |
-| **"Framework apa yang dipakai, aman atau tidak?"** | Backend inti menggunakan arsitektur Node.js/Python terisolasi dengan enkripsi **AES-256** dan TLS 1.3. Akses API dilindungi oleh Bearer Token JWT dan Role-Based Access Control (RBAC) ketat. |
-| **"Apakah data sensitif transaksi money changer dipakai buat training model AI?"** | **Sama sekali tidak.** Kami menggunakan Gemini Enterprise API dengan klausul zero-data retention untuk model publik. Data operasional dan finansial dilindungi perjanjian kerahasiaan resmi (NDA). |
-| **"Pembayaran token dibayar sendiri atau lewat Fleek?"** | Kami memberikan transparansi penuh (pass-through). Klien membuat akun billing mandiri ke penyedia cloud/API, dan tim Fleek memberikan panduan teknis serta memasang budget-cap agar tidak boncos. |
-| **"Bagaimana jika mesin fingerprint kami offline saat internet mati?"** | Mesin menyimpan hingga 100.000 rekaman log secara lokal. Saat koneksi pulih, Fleek AI secara otomatis melakukan delta-sync tanpa ada data keterlambatan yang hilang. |
+| **"Apakah data nasabah & uang kami aman?"** | *"100% aman dan dilindungi hukum, Pak. Seluruh catatan nasabah dan transaksi adalah hak milik Pusat Money Changer sepenuhnya, dan kami ikat dengan NDA resmi bermaterai sebelum mulai kerja."* |
+| **"Datanya disimpan di mana, aman dari pihak luar?"** | *"Disimpan di server privat mandiri di Jakarta/Indonesia, Pak. Tidak campur aduk dengan usaha lain. Ibarat brankas khusus di kantor Bapak sendiri, kuncinya hanya Bapak yang pegang."* |
+| **"Apakah AI-nya merekam bukti transfer atau nomor rekening nasabah?"** | *"Sama sekali tidak, Pak. AI WhatsApp hanya merespons salam dan memandu cek kurs saat itu juga. AI dilarang keras menyimpan nomor rekening atau foto transaksi, apalagi dipakai buat melatih sistem publik."* |
+| **"Apakah kasir atau staf bisa intip pembukuan dan laba?"** | *"Tidak bisa, Pak. Kuncinya dibagi tegas: Kasir/teller hanya bisa input kasir & absensi. Laporan omzet, laba rugi, dan brankas utama hanya bisa dibuka lewat ponsel Pak Budi."* |
+| **"Bagaimana jika mesin fingerprint mati internet saat kantor ramai?"** | *"Mesin punya memori internal aman sampai 100.000 scan. Begitu internet nyala lagi, data otomatis tersinkron ke sistem tanpa ada catatan telat yang hilang."* |
 
 ---
 
